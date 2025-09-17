@@ -2,8 +2,20 @@
 
 这是一个由虾哥开源的 ESP32 项目，以 MIT 许可证发布，允许任何人免费使用，或用于商业用途。
 
-我们希望通过这个项目，能够帮助大家了解 AI 硬件开发，将当下飞速发展的大语言模型应用到实际的硬件设备中。
+## 配置及编译
 
+idf.py fullclean
+ 
+idf.py set-target esp32s3
+
+idf.py reconfigure
+
+idf.py menuconfig （配置唤醒，开发板，支持语音打断等）
+
+idf.py build （编译）
+
+cd .\scripts\        
+python .\release.py （合成最终烧录固件）  
 
 ### 基于 MCP 控制万物
 
@@ -78,5 +90,6 @@
 - [100askTeam/xiaozhi-linux](http://github.com/100askTeam/xiaozhi-linux) 百问科技提供的 Linux 客户端
 - [78/xiaozhi-sf32](https://github.com/78/xiaozhi-sf32) 思澈科技的蓝牙芯片固件
 - [QuecPython/solution-xiaozhiAI](https://github.com/QuecPython/solution-xiaozhiAI) 移远提供的 QuecPython 固件
+
 
 
